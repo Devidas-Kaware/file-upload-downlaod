@@ -17,7 +17,7 @@ import com.devidas.utility.ExcelUtility;
 @CrossOrigin
 public class ExcelUtilityController {
 
-	@GetMapping("/download")
+	@GetMapping("/download-excel")
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response) {
 		response.setContentType("application/vmd.ms-excel");
 		response.setHeader("Content-Disposition", "attachment; filename=" + "testsheet.xlsx");
