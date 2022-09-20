@@ -20,7 +20,7 @@ public class ExcelUtilityController {
 	@GetMapping("/download")
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response) {
 		response.setContentType("application/vmd.ms-excel");
-		response.setHeader("Content-Disposition", "attachment; filename=" + "testsheet.xls");
+		response.setHeader("Content-Disposition", "attachment; filename=" + "testsheet.xlsx");
 		try {
 			XSSFWorkbook workbook = ExcelUtility.createExcelSheet();
 			OutputStream stream = response.getOutputStream();
